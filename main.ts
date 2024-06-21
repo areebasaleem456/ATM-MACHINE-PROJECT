@@ -17,7 +17,7 @@ let pinAnswer=await inquirer.prompt([
 ])
 if(pinAnswer.pin===myPin){
     console.log("CONGRATULATIONS sucessufully login!")
-}
+
 let operations=await inquirer.prompt([
     {
         name:"operation",
@@ -26,7 +26,7 @@ let operations=await inquirer.prompt([
         choices:["Withdraw","CheckBalance"]
     }
 ])
-if(operations.opertaion==="CheckBalance"){
+if(operations.operation==="CheckBalance"){
     console.log(`Your account Balance is ${myBalance}`)
 }
  else if(operations.operation==="Withdraw")
@@ -47,6 +47,7 @@ if(operations.opertaion==="CheckBalance"){
             console.log(`Your account balance is ${myBalance}`)
         }
     }
+}
 else {
     console.log("Your pin is incorrect! TRY AGAIN")
 }
